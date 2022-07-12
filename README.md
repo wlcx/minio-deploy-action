@@ -12,7 +12,7 @@ Put the following step in your workflow:
 
 ```yml
 - name: Minio Deploy
-uses: hkdobrev/minio-deploy-action@v1
+uses: mamal72/minio-perfect-deploy-action@main
 with:
   endpoint: ${{ secrets.MINIO_ENDPOINT }}
   access_key: ${{ secrets.MINIO_ACCESS_KEY }}
