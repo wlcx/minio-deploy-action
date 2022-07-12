@@ -1,6 +1,6 @@
-name: 'Minio Deploy'
-description: 'Deploy to Minio Storage'
-author: 'hkdobrev'
+name: 'Minio Perfect Deploy'
+description: 'Publicly deploy to Minio Storage'
+author: 'mamal72'
 inputs:
   endpoint:
     description: 'Minio endpoint of object storage host'
