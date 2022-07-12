@@ -2,7 +2,9 @@
 
 Run [minio client][] in GitHub Actions to deploy files to Minio object storage.
 
-It uses the `mc mirror --overwrite` command to deploy.
+It uses the `mc mirror --remove --overwrite` command to deploy.
+
+It also sets the policy of the uploaded objects to `public`, so it can be used for static serving purposes.
 
 ## Usage
 
@@ -38,10 +40,10 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@
 
       - name: Minio Deploy
-        uses: hkdobrev/minio-deploy-action@v1
+        uses: mamal72/minio-perfect-deploy-action@main
         with:
           endpoint: ${{ secrets.MINIO_ENDPOINT }}
           access_key: ${{ secrets.MINIO_ACCESS_KEY }}
