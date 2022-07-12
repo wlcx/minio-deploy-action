@@ -40,7 +40,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@
+      - uses: actions/checkout@master
 
       - name: Minio Deploy
         uses: mamal72/minio-perfect-deploy-action@main
